@@ -14,7 +14,7 @@ document
     console.log("🚀 ~ .addEventListener ~ password:", password);
 
     try {
-      const response = await fetch("https://recipe-server-xi.vercel.app/register", {
+      const response = await fetch("https://recipe-server-steel.vercel.app/register", {
         method: "POST",
         // mode:"no-cors",
         headers: {
