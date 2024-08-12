@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page - Find My Recipe</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="login-container">
+        <h2  style="color:rgb(232, 227, 219); font-family: Georgia, 'Times New Roman', Times, serif;">Find My Recipe</h2>
+        <form action  id="login-form">
+            <label for="name" style="color:aliceblue; font-family: Verdana, Geneva, Tahoma, sans-serif;margin-bottom: 30px;">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email" style="color:aliceblue;font-family: Verdana, Geneva, Tahoma, sans-serif;margin-bottom: 30px;">Email Id:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="password" style="color:aliceblue;font-family: Verdana, Geneva, Tahoma, sans-serif;margin-bottom: 30px;">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="submit" id="login"  >Login</button>
+        </form>
+        <p style="color:aliceblue;margin-top: 40px;">Not registered? <a href="reg.html" id="register-link">Register here</a></p>
+    </div>
+    
+
+    <script src="index.js"></script>
+</body>
+</html>
