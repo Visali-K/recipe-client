@@ -20,7 +20,7 @@ document
           "Content-Type": "application/json",
         },
         body: JSON.stringify({ name, age, dob, gender, email, password }),
-        mode:"cors"
+        // mode:"cors"
       });
       const data = await response.json();
       console.log(response, data); // Log the raw response object
