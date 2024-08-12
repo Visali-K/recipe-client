@@ -16,7 +16,7 @@ document
     try {
       const response = await fetch("https://recipe-server-steel.vercel.app/register", {
         method: "POST",
-        mode:"nocors",
+        mode:"no-cors",
         headers: {
           "Content-Type": "application/json",
         },
