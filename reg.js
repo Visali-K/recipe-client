@@ -14,20 +14,20 @@ document
     console.log("🚀 ~ .addEventListener ~ password:", password);
 
     try {
-      const response = await fetch("https://recipe-server-xi.vercel.app/register", {
+      const response = await fetch("http://localhost:5900/register", {
         method: "POST",
-        mode:"cors",
+        // mode:"no-cors",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({ name, age, dob, gender, email, password }),
       });
+      const data = await response.json();
+      console.log(response, data); // Log the raw response object
 
-      console.log(response); // Log the raw response object
-
-      if (response.ok) {
+      if (data.success) {
         alert("Registration Successful");
-        window.location.href = "/login.html"; // Redirect to login page after registration
+        window.location.href = "/index.html"; // Redirect to login page after registration
       } else {
         alert("Registration Failed: " + data.message);
       }
