@@ -22,6 +22,7 @@ document
         },
         body: JSON.stringify({ name, age, dob, gender, email, password }),
       });
+      console.log(JSON.stringify({ name, age, dob, gender, email, password }))
       const data = await response.json();
       console.log(response, data); // Log the raw response object
 
