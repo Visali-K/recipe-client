@@ -13,7 +13,7 @@ document
     const password = document.getElementById("password").value;
     console.log("🚀 ~ .addEventListener ~ password:", password);
 
-   const response= await fetch(`http://recipe-finder-steel.vercel.app/register`,{
+   const response= await fetch(`http://recipe-server-steel.vercel.app/register`,{
             method:'POST',
             headers:{
                 'Content-Type':"application/json",
