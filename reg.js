@@ -13,26 +13,24 @@ document
     const password = document.getElementById("password").value;
     console.log("🚀 ~ .addEventListener ~ password:", password);
 
-    try {
-      const response = await fetch("https://recipe-server-steel.vercel.app/register", {
-        method: "POST",
-        mode:"cors",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ name, age, dob, gender, email, password }),
-      });
-      const data = await response.json();
-      console.log(response, data); // Log the raw response object
-
-      if (data.success) {
-        alert("Registration Successful");
-        window.location.href = "/index.html"; // Redirect to login page after registration
-      } else {
-        alert("Registration Failed: " + data.message);
-      }
-    } catch (error) {
-      console.log("Error:", error);
-      alert("Registration Failed: Error occurred");
-    }
+   const response= await fetch(`http://recipe-finder-steel.vercel.app/register`,{
+            method:'POST',
+            headers:{
+                'Content-Type':"application/json",
+            },
+            body:JSON.stringify({name,age,dob,gender,email,password}),})
+            .then(response=>response.json())
+            .then(data=>{
+                if(data.success){
+                    alert('Registration Successful');
+                    window.location.href = '/index.html';
+                }
+                else{
+                    alert('Registration Failed');
+                }
+    
+            })
+            .catch(error=>console.error('Error:',error));
+    
+    });
   });
