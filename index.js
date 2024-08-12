@@ -9,7 +9,7 @@ document
     console.log(name, email, password);
 
     try {
-      const response = await fetch("https://recipe-server-xi.vercel.app/login", {
+      const response = await fetch("https://recipe-server-steel.vercel.app/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
