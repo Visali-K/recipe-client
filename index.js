@@ -8,25 +8,27 @@ document
     const password = document.getElementById("password").value;
     console.log(name, email, password);
 
-    try {
-      const response = await fetch("https://recipe-server-steel.vercel.app/login", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
+   try {
+        const response = await fetch(`http://recipe-server-steel.vercel.app/login`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ email, password })
+            
+        });
+       
+        const result = await response.json();
 
-        body: JSON.stringify({ email, password }),
-      });
-
-      const result = await response.json();
-
-      if (result.success) {
-        window.location.href = "/home.html";
-      } else {
-        console.error("error occured");
-        alert("You are not a User Please Register");
-      }
+        if (result.success) {
+            window.location.href = '/home.html'; 
+        } else {
+           console.error("error occured")
+           alert('You are not a User Please Register')
+           
+        }
+       
     } catch (error) {
-      console.log("Error during login:", error);
-    }
-  });
+        console.log('Error during login:', error);
+       
+    }});
